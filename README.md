@@ -12,5 +12,4 @@ You can find this in Anki by going to the card type editor and clicking on the "
 
 
 ## Flexoki
-To see more about Flexoki: [Website](https://stephango.com/flexoki), [GitHub](https://github.com/kepano/flexoki)
-
+To see more about Flexoki: [Website](https://stephango.com/flexoki), [kepano/flexoki](https://github.com/kepano/flexoki)
