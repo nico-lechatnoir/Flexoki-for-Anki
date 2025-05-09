@@ -1,0 +1,197 @@
+/*#region ===================================== DEFAULTS */
+:root {
+    --tx: #100F0F;
+    --tx-2: #6F6E69;
+    --tx-3: #B7B5AC;
+
+    --ui: #E6E4D9;
+    --ui-2: #DAD8CE;
+    --ui-3: #CECDC3;
+
+    --bg: #FFFCF0;
+    --bg-2: #F2F0E5;
+
+    --re: #AF3029;
+    --re-2: #D14D41;
+    --re-3: #F89A8A;
+    --or: #BC5215;
+    --or-2: #DA702C;
+    --ye: #AD8301;
+    --ye-2: #D0A215;
+    --ye-3: #ECCB60;
+    --gr: #66800B;
+    --gr-2: #879A39;
+    --gr-3: #BEC97E;
+    --cy: #24837B;
+    --cy-2: #3AA99F;
+    --bl: #205EA6;
+    --bl-2: #4385BE;
+    --pu: #5E409D;
+    --pu-2: #8B7EC8;
+    --ma: #A02F6F;
+    --ma-2: #CE5D97;
+    color-scheme: light
+}
+
+:root.night-mode {
+    --tx: #CECDC3;
+    --tx-2: #878580;
+    --tx-3: #575653;
+
+    --ui: #282726;
+    --ui-2: #343331;
+    --ui-3: #403E3C;
+
+    --bg: #100F0F;
+    --bg-2: #1C1B1A;
+
+    --re: #D14D41;
+    --re-2: #AF3029;
+    --re-3: #6C201C;
+    --or: #DA702C;
+    --or-2: #BC5215;
+    --ye: #D0A215;
+    --ye-2: #AD8301;
+    --ye-3: #664D01;
+    --gr: #879A39;
+    --gr-2: #66800B;
+    --gr-3: #3D4C07;
+    --cy: #3AA99F;
+    --cy-2: #24837B;
+    --bl: #4385BE;
+    --bl-2: #205EA6;
+    --pu: #8B7EC8;
+    --pu-2: #5E409D;
+    --ma: #CE5D97;
+    --ma-2: #A02F6F;
+    color-scheme: dark
+}
+
+:root,
+:root.night-mode {
+    --fg: var(--tx);
+    --fg-subtle: var(--tx-2);
+    --fg-disabled: var(--tx-3);
+    --fg-faint: var(--ui-2);
+    --fg-link: var(--bl-2);
+
+    --canvas: var(--bg);
+
+    --border: var(--ui-2);
+    --border-subtle: var(--ui);
+    --border-strong: var(--ui-3);
+
+    --button-bg: var(--bg);
+    --button-gradient-start: var(--bg);
+    --button-gradient-end: var(--bg-2);
+    --button-hover-border: var(--border-strong);
+
+    /* Win/Lin only */
+    --scrollbar-bg: var(--ui);
+    --scrollbar-bg-hover: var(--ui-2);
+    --scrollbar-bg-active: var(--ui-3);
+
+    --shadow: var(--ui);
+    --shadow-inset: var(--ui-3);
+    --shadow-subtle: var(--ui-2);
+    --shadow-focus: var(--pu-2);
+
+    --marked: var(--ye-2);
+    --flag-1: var(--re);
+    --flag-2: var(--or);
+    --flag-3: var(--gr);
+    --flag-4: var(--bl);
+    --flag-5: var(--ma);
+    --flag-6: var(--cy);
+    --flag-7: var(--pu);
+    --type-bad: var(--re-3);
+    --type-good: var(--gr-3);
+}
+
+/*#endregion =============================== */
+
+/*#region ===================================== CARD STYLING */
+
+.card {
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    color: var(--fg);
+    background-color: var(--canvas);
+}
+
+hr {
+    background-color: var(--border)
+}
+
+
+#_flag {
+    -webkit-text-stroke-color: var(--fg)
+}
+
+#_mark {
+    color: var(--marked);
+    -webkit-text-stroke-color: var(--fg);
+}
+
+#image-occlusion-canvas {
+    --inactive-shape-color: var(--ye-3);
+    --active-shape-color: var(--re-3);
+    --inactive-shape-border: 1px var(--border);
+    --active-shape-border: 2px var(--border-strong);
+}
+
+.cloze {
+    color: var(--bl-2);
+}
+
+
+/*#region ===================================== TYPE IN THE ANSWER */
+input#typeans {
+    background-color: var(--bg-2);
+    border-color: var(--border);
+    color: var(--fg);
+}
+
+.typeBad {
+    color: var(--fg);
+    background: var(--type-bad);
+}
+
+.typeGood {
+    background: var(--type-good);
+    color: var(--fg);
+}
+
+/* Not supported on Anki Mobile */
+.typeMissed {
+    color: var(--fg);
+    background: var(--fg-faint);
+}
+
+/*#endregion =============================== */
+
+
+/*#region =====================================  BUTTONS */
+button,
+button#toggle {
+    --canvas: var(--button-bg);
+    --fg: var(--fg);
+    background: var(--canvas);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+    box-shadow: 0px 1px 3px var(--border-subtle);
+}
+
+.replay-button svg circle {
+    fill: var(--bg-2);
+    stroke: var(--fg-subtle);
+}
+
+.replay-button svg path {
+    fill: var(--fg-subtle);
+}
+
+/*#endregion =============================== */
+
+/*#endregion =============================== */
